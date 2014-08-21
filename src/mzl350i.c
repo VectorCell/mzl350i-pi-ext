@@ -581,7 +581,7 @@ int main (void)
     
     LCD_Init();
     LCD_test();
-    //loadFrameBuffer_diff_480320();
-    loadFrameBuffer_diff_960640();
+    loadFrameBuffer_diff_480320();
+    // loadFrameBuffer_diff_960640();
     return 0 ;
 }
