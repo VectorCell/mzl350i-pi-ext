@@ -2,3 +2,26 @@ mzl350i-pi-ext
 ==============
 
 Driver for JBTek LCD 480x320
+
+Got it working... (Instructions below). I am still having an issue getting the touch part working though. First download extract and copy the mzl350i-pi-ext folder and copy it over to your /home/pi folder using Cyberduck or some other program via SSH. Then do the following in order. Enjoy!
+
+nano /boot/config.txt
+
+Then change
+#framebuffer_width=1280
+#framebuffer_height=720
+to
+framebuffer_width=960
+framebuffer_height=640
+(Then Press Ctrl + X to exit, Then Y to save and then hit enter to overwrite file with changes)
+
+sudo apt-get update
+sudo apt-get install build-essential
+cd /home/pi/mzl350i-pi-ext/src
+make
+sudo cp /home/pi/mzl350i-pi-ext/lcd /etc/init.d/
+sudo chmod 755 /etc/init.d/lcd
+sudo update-rc.d lcd defaults
+reboot
+
+If anyone can help me get the touch part working I would be more than happy and would give this screen 5 stars. As, I did not buy it primarily for the touch part I am still fairly satisfied.
