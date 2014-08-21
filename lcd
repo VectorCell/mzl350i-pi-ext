@@ -9,4 +9,4 @@
 # Short-Description: Start lcd daemon
 ### END INIT INFO
 
-sudo /home/pi/mzl350i-pi-ext/src/mzl350i
+sudo /home/pi/mzl350i-pi-ext/src/mzl350i.sh
