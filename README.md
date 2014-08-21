@@ -3,6 +3,8 @@ mzl350i-pi-ext
 
 Driver for JBTek LCD 480x320
 
+on http://www.amazon.com/JBtek-Version-480x320-Raspberry-Transparent/dp/B00L15FOF4
+
 Got it working... (Instructions below). I am still having an issue getting the touch part working though. First download extract and copy the mzl350i-pi-ext folder and copy it over to your /home/pi folder using Cyberduck or some other program via SSH. Then do the following in order. Enjoy!
 
 nano /boot/config.txt
