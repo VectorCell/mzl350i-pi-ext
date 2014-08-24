@@ -576,8 +576,8 @@ int main (void)
     //bcm2835_spi_setChipSelectPolarity(BCM2835_SPI_CS1,LOW);
 
     LCD_PWM_CLR;
-    printf ("Raspberry Pi MZL350I LCD Testing...\n") ;
-    printf ("http://jwlcd-tp.taobao.com\n") ;
+    printf ("Raspberry Pi MZL350I LCD Initializing...\n") ;
+    // printf ("http://jwlcd-tp.taobao.com\n") ;
     
     LCD_Init();
     LCD_test();
