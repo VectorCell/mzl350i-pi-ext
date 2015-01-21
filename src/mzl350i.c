@@ -242,6 +242,20 @@ void LCD_test()
 	LCD_CS_SET;
 }
 
+void LCD_power_on()
+{
+	LCD_PWM_CLR;
+	LCD_PWM_SET;
+	delay(1000);
+	LCD_PWM_CLR;
+}
+
+void LCD_power_off()
+{
+	bcm2835_gpio_fsel(LCDPWM, BCM2835_GPIO_FSEL_OUTP);
+	LCD_Init();
+}
+
 void LCD_clear(uint p)
 {
 	uint i,j;
@@ -577,11 +591,13 @@ int main (void)
 
     LCD_PWM_CLR;
     printf ("Raspberry Pi MZL350I LCD Initializing...\n") ;
-    // printf ("http://jwlcd-tp.taobao.com\n") ;
+    //printf ("http://jwlcd-tp.taobao.com\n") ;
     
     LCD_Init();
     LCD_test();
+    //LCD_power_off();
+    //LCD_power_on();
     loadFrameBuffer_diff_480320();
-    // loadFrameBuffer_diff_960640();
+    //loadFrameBuffer_diff_960640();
     return 0 ;
 }
